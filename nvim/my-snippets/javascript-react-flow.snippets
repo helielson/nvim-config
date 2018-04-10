@@ -1,0 +1,169 @@
+snippet scomponent "Stateless component (js)" b
+export const ${1:Component}: SComponent<Props> =
+	({ $2 }) => (
+		${0:${VISUAL}}
+	);
+
+export default $1;
+endsnippet
+
+snippet initscomponent "init Stateless component (js)" b
+// @flow
+
+import React from 'react';
+
+if (process.env.BROWSER) {
+	require('./scss/style.scss');
+}
+
+type Props = {
+}
+
+export const ${1:Component}: SComponent<Props> = ({ $2 }) => (
+	${0:${VISUAL}}
+);
+
+export default $1;
+endsnippet
+
+snippet classcomp "init Class component (js)" b
+export class ${1:Component} extends Component<Props> {
+	constructor(props: Props) {
+		super(props);
+		autoBind(this);
+	}
+
+	render() {
+		return (
+			<div className="$1">
+				${0:${VISUAL}}
+			</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet initclasscomp "init Class component (js)" b
+// @flow
+
+import React, { Component } from 'react';
+import autoBind from 'react-autobind';
+
+if (process.env.BROWSER) {
+	require('./scss/style.scss');
+}
+
+type Props = {
+};
+
+export class ${1:Component} extends Component<Props> {
+	constructor(props: Props) {
+		super(props);
+		autoBind(this);
+	}
+
+	render() {
+		return (
+			<div className="$1">
+				${0:${VISUAL}}
+			</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet createcontainer "Relay container (js)" b
+export default Relay.createContainer(${1:Component}, {
+	initialVariables: {
+		${2:${VISUAL}}
+	},
+
+	fragments: {
+		root: () => Relay.QL\`
+			fragment on RootApi {
+				${0:${VISUAL}}
+			}
+		\`,
+	},
+});
+endsnippet
+
+snippet clog "Relay container (js)" b
+console.log('>>>>>>>>>>>>>>>>>>> $1', ${1});
+endsnippet
+
+snippet describe "describe test(js)" b
+describe('${1}', () => {
+	it('should ${2}', () => {
+		${0:${VISUAL}}
+	});
+});
+endsnippet
+
+snippet describecomp "describe component test(js)" b
+describe('<${1:Component} />', () => {
+	it('should render properly', () => {
+		${0:${VISUAL}}
+	});
+});
+endsnippet
+
+snippet initcomptest "init component test (js)" b
+import React from 'react';
+
+import { shallow } from 'enzyme';
+
+import ${1:Component} from '../';
+
+
+describe('<$1 />', () => {
+	describe('render', () => {
+		it('should render properly', () => {
+			const wrapper = shallow(<$1 />);
+			expect({}).toMatchSnapshot();
+		});
+	});
+});
+endsnippet
+
+snippet div "div (js)" b
+<div className="${1:class-name}">
+	${0:${VISUAL}}
+</div>
+endsnippet
+
+
+snippet constructor "create constructor of class (js)" b
+import autoBind from 'react-autobind';
+constructor(props: Props) {
+	super(props);
+	autoBind(this);
+}
+endsnippet
+
+snippet Choose "create Choose/When/Otherwise statement" b
+import { Choose, When, Otherwise } from 'jsx-control-statements';
+<Choose>
+	<When condition={${0:${VISUAL}}}>
+	</When>
+	<Otherwise>
+	</Otherwise>
+</Choose>
+endsnippet
+
+snippet For "create For statement" b
+import { For } from 'jsx-control-statements';
+declare var item: Object;
+declare var idx: number;
+<For each="${1:item}" of={${0:${VISUAL}}} index="idx">
+</For>
+endsnippet
+
+snippet dyimport "Create dyname webpack import" b
+import(/* webpackChunkName: "$1" */ '${1:modulePath}').then(module => {
+});
+endsnippet
