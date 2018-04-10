@@ -24,7 +24,7 @@ $ git clone https://github.com/Shougo/neobundle.vim nvim/bundle/neobundle.vim
 ```
 
 
-# Troubleshooting
+### Troubleshooting
 If you are getting the error below while opening nvim:
 ```
 UltiSnips requires py >= 2.7 or py3
