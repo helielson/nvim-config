@@ -140,6 +140,9 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 " emmet
 let g:user_emmet_leader_key='<c-s>'
 
+" vim-commentary
+autocmd FileType javascript setlocal commentstring=//\ %s
+
 " NeoBundle init
 set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.config/nvim/bundle/'))
@@ -150,6 +153,7 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'drn/zoomwin-vim'
 NeoBundle 'ervandew/supertab'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'helielson/vim-fugitive'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'mattn/emmet-vim'
@@ -158,6 +162,7 @@ NeoBundle 'mitermayer/vim-prettier', {
         \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'vim-airline/vim-airline'
