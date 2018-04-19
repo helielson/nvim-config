@@ -4,6 +4,7 @@ source ~/.config/nvim/functions
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set expandtab
 
 set nowrap
 set expandtab                                                " expand tabs to spaces
@@ -12,6 +13,7 @@ set clipboard+=unnamedplus
 " search sets
 set ignorecase                                               " case-insensitive search
 set smartcase                                                " case-sensitive search if any caps
+set smartindent
 
 set list                                                     " show trailing whitespace
 set number                                                   " show line numbers
