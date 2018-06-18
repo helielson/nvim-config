@@ -144,6 +144,9 @@ let g:user_emmet_leader_key='<c-s>'
 
 " vim-commentary
 autocmd FileType javascript setlocal commentstring=//\ %s
+autocmd FileType go setlocal commentstring=//\ %s
+autocmd FileType vim setlocal commentstring=\"\ %s
+autocmd FileType yaml setlocal commentstring=\#\ %s
 
 " NeoBundle init
 set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
