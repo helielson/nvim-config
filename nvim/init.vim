@@ -68,8 +68,6 @@ autocmd VimResized * :wincmd =
 
 colorscheme oneblue
 
-filetype plugin indent on
-
 """""""""""""""""""" PLUGINS CONFIGURATION """"""""""""""""""""""""""
 
 " ctrlp
