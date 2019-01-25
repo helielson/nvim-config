@@ -1,0 +1,81 @@
+snippet rnstyle "Create react-native stylesheet (js)" b
+import { StyleSheet } from 'react-native';
+const styles = StyleSheet.create({
+	${0:${VISUAL}}
+});
+endsnippet
+
+snippet mystiqueStyleRn "Create mystique import base (js)" b
+import mystique from '~/styles/mystique';
+const { ${0:${VISUAL}} } = mystique;
+endsnippet
+
+snippet initscreen "init react-native screen (js)" b
+/**
+ * @format
+ * @flow
+ */
+
+import React from 'react';
+import { Container, View, Text } from 'native-base';
+import { createFragmentContainer, graphql } from 'react-relay';
+
+import createRelayQueryRenderer from '~/hoc/createRelayQueryRenderer';
+import hoistNonReactStatics from 'hoist-non-react-statics';
+
+type Props = {
+	root: Object,
+};
+
+export class ${1:Component} extends React.Component<Props> {
+	static navigationOptions = () => ({
+		title: 'My New Screen',
+	});
+
+	render() {
+		return (
+			<Container>
+				<View>
+					<Text>My new screen. PID: {this.props.root.me.pid}</Text>
+				</View>
+			</Container>
+		);
+	}
+}
+
+const $1Query = graphql\`
+	query $1Query {
+		root {
+			me {
+				pid
+			}
+		}
+	}
+\`;
+
+const $1Container = hoistNonReactStatics(
+	createFragmentContainer(
+		$1,
+		{
+			root: graphql\`
+				fragment $1_root on RootApi {
+					me {
+						pid
+					}
+				}
+			\`,
+		},
+		$1Query
+	),
+	$1
+);
+
+export default createRelayQueryRenderer($1Container, {
+	query: $1Query,
+	getVariables: props => ({}),
+});
+endsnippet
+
+snippet cleanstore "Create clean store command" b
+require('react-native').AsyncStorage.clear();
+endsnippet

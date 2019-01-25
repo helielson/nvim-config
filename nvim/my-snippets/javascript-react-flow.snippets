@@ -8,7 +8,10 @@ export default $1;
 endsnippet
 
 snippet initscomponent "init Stateless component (js)" b
-// @flow
+/**
+ * @format
+ * @flow
+ */
 
 import React from 'react';
 
@@ -30,7 +33,6 @@ snippet classcomp "init Class component (js)" b
 export class ${1:Component} extends Component<Props> {
 	constructor(props: Props) {
 		super(props);
-		autoBind(this);
 	}
 
 	render() {
@@ -46,10 +48,12 @@ export default $1;
 endsnippet
 
 snippet initclasscomp "init Class component (js)" b
-// @flow
+/**
+ * @format
+ * @flow
+ */
 
-import React, { Component } from 'react';
-import autoBind from 'react-autobind';
+import React from 'react';
 
 if (process.env.BROWSER) {
 	require('./scss/style.scss');
@@ -58,10 +62,9 @@ if (process.env.BROWSER) {
 type Props = {
 };
 
-export class ${1:Component} extends Component<Props> {
+export class ${1:Component} extends React.Component<Props> {
 	constructor(props: Props) {
 		super(props);
-		autoBind(this);
 	}
 
 	render() {
@@ -76,7 +79,7 @@ export class ${1:Component} extends Component<Props> {
 export default $1;
 endsnippet
 
-snippet createcontainer "Relay container (js)" b
+snippet classicCreateContainer "Relay container (js)" b
 export default Relay.createContainer(${1:Component}, {
 	initialVariables: {
 		${2:${VISUAL}}
@@ -92,7 +95,7 @@ export default Relay.createContainer(${1:Component}, {
 });
 endsnippet
 
-snippet clog "Relay container (js)" b
+snippet clog "Console log markup (js)" b
 console.log('>>>>>>>>>>>>>>>>>>> $1', ${1});
 endsnippet
 
@@ -113,12 +116,12 @@ describe('<${1:Component} />', () => {
 endsnippet
 
 snippet initcomptest "init component test (js)" b
-import React from 'react';
+/** @format */
 
+import React from 'react';
 import { shallow } from 'enzyme';
 
 import ${1:Component} from '../';
-
 
 describe('<$1 />', () => {
 	describe('render', () => {
@@ -138,10 +141,8 @@ endsnippet
 
 
 snippet constructor "create constructor of class (js)" b
-import autoBind from 'react-autobind';
 constructor(props: Props) {
 	super(props);
-	autoBind(this);
 }
 endsnippet
 

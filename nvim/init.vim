@@ -126,6 +126,7 @@ let g:UltiSnipsSnippetsDir = '~/.config/nvim/my-snippets'
 
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-jasmine-arrow
 autocmd FileType javascript UltiSnipsAddFiletypes javascript-react-flow
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-react-native
 
 " vim-better-whitespace
 let g:strip_whitespace_on_save = 1
