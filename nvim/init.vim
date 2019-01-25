@@ -78,6 +78,9 @@ let g:ctrlp_working_path_mode = 'a'
 
 " ack
 cnoreabbrev Ack Ack!
+cnoreabbrev Gst Gstatus<CR><c-w>J<CR>
+cnoreabbrev Gstat Gstatus<CR><c-w>J<CR>
+cnoreabbrev Gstatus Gstatus<CR><c-w>J<CR>
 
 " zoomwin
 map <silent> <leader>z :ZoomWin<CR>
