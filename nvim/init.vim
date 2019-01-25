@@ -164,7 +164,7 @@ NeoBundle 'helielson/vim-fugitive'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'mitermayer/vim-prettier', {
+NeoBundle 'prettier/vim-prettier', {
         \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'SirVer/ultisnips'
