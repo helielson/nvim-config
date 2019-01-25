@@ -36,7 +36,7 @@ map <silent> z2 :set foldlevel=2<CR>
 map <silent> z3 :set foldlevel=3<CR>
 map <silent> z0 :set foldlevel=0<CR>
 
-map <silent> <leader>2 :set sw=2<cr>:set sts=2<cr>:set ts=2<cr>
+map <silent> <leader>2 :set ts=2<cr>:set sts=2<cr>:set sw=2<cr>
 
 " Find merge conflict markers
 map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
@@ -159,7 +159,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'drn/zoomwin-vim'
-NeoBundle 'ervandew/supertab'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'helielson/vim-fugitive'
 NeoBundle 'honza/vim-snippets'
@@ -174,6 +173,7 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-syntastic/syntastic'
+NeoBundle 'ervandew/supertab' "order matters. So this plugin should be executed in the end
 
 call neobundle#end()
 
