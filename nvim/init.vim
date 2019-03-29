@@ -92,22 +92,20 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
-" Syntastic
-let g:syntastic_check_on_open = 0
-let g:syntastic_enable_signs = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_wq = 1
-
 let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
-let b:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_go_checkers = ['gometalinter']
+
+let g:ale_sign_column_always = 1
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_linters = {
+\ 'typescript': ['tslint', 'tsserver'],
+\ 'javascript': ['eslint', 'flow', 'prettier'],
+\ 'python': ['pylint'],
+\ 'go': ['gometalinter']
+\}
 
 let g:flow#enable = 0
-autocmd BufNewFile,BufRead *.jsx let b:syntastic_checkers = ['eslint', 'flow']
-autocmd BufNewFile,BufRead *.js let b:syntastic_checkers = ['eslint', 'flow']
 
 " Fugitive
 nnoremap <leader>d :Gdiff<CR>                                " open git diff
@@ -172,7 +170,7 @@ NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-syntastic/syntastic'
+NeoBundle 'w0rp/ale'
 NeoBundle 'ervandew/supertab' "order matters. So this plugin should be executed in the end
 
 call neobundle#end()
