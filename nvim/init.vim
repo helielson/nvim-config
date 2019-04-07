@@ -172,6 +172,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'w0rp/ale'
 NeoBundle 'ervandew/supertab' "order matters. So this plugin should be executed in the end
+NeoBundle 'leafgarland/typescript-vim'
 
 call neobundle#end()
 
