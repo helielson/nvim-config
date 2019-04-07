@@ -53,6 +53,20 @@ nnoremap <silent> <leader>a :noh<CR>
 " python config
 let g:python_host_prog = '/usr/local/bin/python'
 
+" optimize neovim startup, avoiding system call to discover the provider
+let g:clipboard = {
+  \ 'name': 'pbcopy',
+  \ 'copy': {
+  \    '+': 'pbcopy',
+  \    '*': 'pbcopy',
+  \  },
+  \ 'paste': {
+  \    '+': 'pbpaste',
+  \    '*': 'pbpaste',
+  \ },
+  \ 'cache_enabled': 0,
+  \ }
+
 " removes the scrollbars
 set guioptions-=r
 set guioptions-=L
