@@ -10,6 +10,17 @@ import mystique from '~/styles/mystique';
 const { ${0:${VISUAL}} } = mystique;
 endsnippet
 
+snippet createFragmentContainer "createFragmentContainer (js)" b
+import { createFragmentContainer, graphql } from 'react-relay';
+export default createFragmentContainer(${1:Component}, {
+	contact: graphql\`
+		fragment $1_${2:contact} on ${3:Contact} {
+			${4:id}
+		}
+	\`,
+});
+endsnippet
+
 snippet initscreen "init react-native screen (js)" b
 /**
  * @format
