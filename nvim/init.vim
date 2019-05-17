@@ -51,7 +51,7 @@ nnoremap <silent> <leader>s :set spell!<CR>
 nnoremap <silent> <leader>a :noh<CR>
 
 " python config
-let g:python_host_prog = '/usr/local/bin/python'
+let g:python_host_prog = '/usr/bin/python'
 
 " optimize neovim startup, avoiding system call to discover the provider
 let g:clipboard = {
