@@ -19,6 +19,8 @@ call zvim#plug#ensure_installation()
 call plug#begin(g:settings.plugin_manager_dir)
 
 if s:is_group_enabled('core') "{{{
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+        \| call s:configure('coc.nvim')
   Plug 'christoomey/vim-tmux-navigator'
         \| call s:configure('vim-tmux-navigator')
   Plug 'ctrlpvim/ctrlp.vim'
@@ -35,7 +37,6 @@ if s:is_group_enabled('core') "{{{
         \| call s:configure('vim-better-whitespace')
   Plug 'mattn/emmet-vim'
         \| call s:configure('emmet-vim')
-  Plug 'ervandew/supertab' "order matters. So this plugin should be executed in the end
 endif "}}}
 
 if s:is_group_enabled('linter') "{{{
@@ -56,8 +57,6 @@ endif "}}}
 
 if s:is_group_enabled('snippets') "{{{
   Plug 'honza/vim-snippets'
-  Plug 'SirVer/ultisnips'
-        \| call s:configure('ultisnips')
 endif "}}}
 
 call plug#end()
