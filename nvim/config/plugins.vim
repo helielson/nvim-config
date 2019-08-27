@@ -49,6 +49,8 @@ endif "}}}
 if s:is_group_enabled('syntax') "{{{
   Plug 'fatih/vim-go'
   Plug 'leafgarland/typescript-vim'
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'thosakwe/vim-flutter'
 endif "}}}
 
 if s:is_group_enabled('appearance') "{{{
