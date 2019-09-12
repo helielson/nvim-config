@@ -51,6 +51,7 @@ if s:is_group_enabled('syntax') "{{{
   Plug 'leafgarland/typescript-vim'
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'thosakwe/vim-flutter'
+  Plug 'udalov/kotlin-vim'
 endif "}}}
 
 if s:is_group_enabled('appearance') "{{{
