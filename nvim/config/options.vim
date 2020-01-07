@@ -8,7 +8,7 @@ endif
 let g:settings = {}
 let g:settings.enabled_plugins = 1
 let g:settings.enable_colorscheme = 1
-let g:settings.colorscheme = 'oneblue'
+let g:settings.colorscheme = 'pb'
 let g:settings.background = ''
 let g:settings.enable_cursorline = 0
 let g:settings.hiddenfileinfo = 0
