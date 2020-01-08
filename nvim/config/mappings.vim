@@ -19,3 +19,4 @@ nnoremap <silent> <leader>s :set spell!<CR>
 " undo the highlight for the current highlighted text
 nnoremap <silent> <leader>a :noh<CR>
 
+nnoremap <silent> <leader>e :CocCommand<CR>
