@@ -5,5 +5,13 @@
   "flutter.provider.hot-reload": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "dart"
-  ]
+  ],
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "disableWorkspaceFolders": true,
+      "filetypes": ["go"]
+    }
+  }
 }
