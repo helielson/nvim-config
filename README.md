@@ -10,7 +10,7 @@ $ brew install neovim
 ### Installation:
 1. Clone the repo:
 ```sh
-$ git clone git://github.com/helielson/nvim-config.git $NVIM_CONFIG_LOCAL_PATH
+$ git clone git@github.com:helielson/nvim-config.git $NVIM_CONFIG_LOCAL_PATH
 ```
 
 2. Link the config
