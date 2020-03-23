@@ -92,7 +92,7 @@ let s:comment_grey = { "gui": "#5C6670", "cterm": "236", "cterm16": "15" }
 let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
 let s:gutter_bg_grey = { "gui": "#2C313A", "cterm": "NONE", "cterm16": "NONE" }
 let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "15" } " TODO: This cterm16 value doesn't work great here
-let s:visual_grey = { "gui": "#3E4451", "cterm": "236", "cterm16": "15" }
+let s:visual_grey = { "gui": "#3E4451", "cterm": "238", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 
