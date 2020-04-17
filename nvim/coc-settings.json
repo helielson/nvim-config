@@ -4,7 +4,8 @@
   "javascript.validate.enable": false,
   "flutter.provider.hot-reload": true,
   "coc.preferences.formatOnSaveFiletypes": [
-    "dart"
+    "dart",
+    "javascript"
   ],
   "languageserver": {
     "golang": {

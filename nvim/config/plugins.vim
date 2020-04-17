@@ -40,8 +40,8 @@ if s:is_group_enabled('core') "{{{
 endif "}}}
 
 if s:is_group_enabled('linter') "{{{
-  Plug 'prettier/vim-prettier', {
-          \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+  Plug 'neoclide/coc-prettier'
+        \| call s:configure('coc-prettier')
   Plug 'w0rp/ale'
         \| call s:configure('ale')
 endif "}}}
@@ -50,7 +50,8 @@ if s:is_group_enabled('syntax') "{{{
   Plug 'fatih/vim-go'
   Plug 'leafgarland/typescript-vim'
   Plug 'dart-lang/dart-vim-plugin'
-  Plug 'thosakwe/vim-flutter'
+  Plug 'iamcco/coc-flutter'
+  Plug 'neoclide/coc-json'
   Plug 'udalov/kotlin-vim'
 endif "}}}
 
