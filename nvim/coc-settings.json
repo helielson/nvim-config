@@ -2,7 +2,6 @@
   "snippets.autoTrigger": true,
   "tsserver.enableJavascript": true,
   "javascript.validate.enable": false,
-  "flutter.provider.hot-reload": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "dart",
     "javascript"

@@ -50,7 +50,7 @@ if s:is_group_enabled('syntax') "{{{
   Plug 'fatih/vim-go'
   Plug 'leafgarland/typescript-vim'
   Plug 'dart-lang/dart-vim-plugin'
-  Plug 'iamcco/coc-flutter'
+  Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-json'
   Plug 'udalov/kotlin-vim'
 endif "}}}
