@@ -40,7 +40,7 @@ if s:is_group_enabled('core') "{{{
 endif "}}}
 
 if s:is_group_enabled('linter') "{{{
-  Plug 'neoclide/coc-prettier'
+  Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
         \| call s:configure('coc-prettier')
   Plug 'w0rp/ale'
         \| call s:configure('ale')
@@ -53,6 +53,7 @@ if s:is_group_enabled('syntax') "{{{
   Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-json'
   Plug 'udalov/kotlin-vim'
+  Plug 'sheerun/vim-polyglot'
 endif "}}}
 
 if s:is_group_enabled('appearance') "{{{
