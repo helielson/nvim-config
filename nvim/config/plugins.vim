@@ -44,6 +44,8 @@ if s:is_group_enabled('linter') "{{{
         \| call s:configure('coc-prettier')
   Plug 'w0rp/ale'
         \| call s:configure('ale')
+  Plug 'editorconfig/editorconfig-vim'
+        \| call s:configure('editorconfig-vim')
 endif "}}}
 
 if s:is_group_enabled('syntax') "{{{
