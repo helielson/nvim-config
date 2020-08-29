@@ -18,11 +18,6 @@ $ git clone git@github.com:helielson/nvim-config.git $NVIM_CONFIG_LOCAL_PATH
 $ ln -s "$NVIM_CONFIG_LOCAL_PATH/nvim" ~/.config/nvim
 ```
 
-3. Add neobundle
-```sh
-$ git clone https://github.com/Shougo/neobundle.vim nvim/bundle/neobundle.vim
-```
-
 ###
 Coc extensions:
 * coc-sourcekit 0.0.2
