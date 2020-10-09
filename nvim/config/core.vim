@@ -97,6 +97,12 @@ set winheight=9999
 autocmd VimResized * :wincmd = " automatically rebalance windows on vim resize
 "}}}
 
+"{{{
+set winheight=5
+set winminheight=5
+autocmd WinEnter * wincmd _
+"}}}
+
 "{{{ cursor
 if g:settings.enable_cursorline == 1
   set cursorline

@@ -56,6 +56,7 @@ if s:is_group_enabled('syntax') "{{{
   Plug 'neoclide/coc-json'
   Plug 'udalov/kotlin-vim'
   Plug 'sheerun/vim-polyglot'
+        \| call s:configure('vim-polyglot')
 endif "}}}
 
 if s:is_group_enabled('appearance') "{{{
