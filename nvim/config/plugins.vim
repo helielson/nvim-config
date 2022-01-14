@@ -29,7 +29,7 @@ if s:is_group_enabled('core') "{{{
         \| call s:configure('zoomwin-vim')
   Plug 'mileszs/ack.vim'
         \| call s:configure('ack.vim')
-  Plug 'helielson/vim-fugitive'
+  Plug 'tpope/vim-fugitive'
         \| call s:configure('vim-fugitive')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'tpope/vim-commentary'
