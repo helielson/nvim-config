@@ -1,0 +1,14 @@
+snippet wtest "init widget test (dart)" b
+import 'package:flutter/material.dart';
+
+void main() {
+  group('${1}', () {
+    testWidgets(
+      '${2}',
+      (WidgetTester tester) async {
+        ${0:${VISUAL}}
+      },
+    );
+  });
+}
+endsnippet

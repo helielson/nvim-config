@@ -1,5 +1,11 @@
 {
   "snippets.autoTrigger": true,
+  "snippets.ultisnips.directories": [
+    "snippets",
+  ],
+  "snippets.extends": {
+    "dart-flutter": ["dart"],
+  },
   "tsserver.enableJavascript": true,
   "javascript.validate.enable": false,
   "coc.preferences.formatOnSaveFiletypes": [
