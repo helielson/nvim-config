@@ -14,3 +14,5 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 nnoremap <silent> <leader>x :CocCommand<CR>
+
+nmap <silent> gd <Plug>(coc-definition)
