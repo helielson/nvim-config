@@ -19,5 +19,6 @@
       "disableWorkspaceFolders": true,
       "filetypes": ["go"]
     }
-  }
+  },
+  "suggest.noselect": true
 }
