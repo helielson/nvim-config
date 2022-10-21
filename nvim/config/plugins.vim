@@ -50,7 +50,6 @@ endif "}}}
 if s:is_group_enabled('syntax') "{{{
   Plug 'fatih/vim-go'
   Plug 'dart-lang/dart-vim-plugin'
-        \| call s:configure('dart-vim-plugin')
   Plug 'sheerun/vim-polyglot'
 endif "}}}
 
