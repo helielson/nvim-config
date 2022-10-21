@@ -18,15 +18,6 @@ $ git clone git@github.com:helielson/nvim-config.git $NVIM_CONFIG_LOCAL_PATH
 $ ln -s "$NVIM_CONFIG_LOCAL_PATH/nvim" ~/.config/nvim
 ```
 
-###
-Coc extensions:
-* coc-sourcekit 0.0.2
-* coc-json [RTP] 1.2.5
-* coc-prettier [RTP] 1.1.13
-+ coc-flutter [RTP] 1.2.2
-+ coc-python 1.2.12
-
-
 ### Troubleshooting
 If you are getting the error below while opening nvim:
 ```

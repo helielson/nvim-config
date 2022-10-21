@@ -19,8 +19,11 @@ call zvim#plug#ensure_installation()
 call plug#begin(g:settings.plugin_manager_dir)
 
 if s:is_group_enabled('core') "{{{
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-        \| call s:configure('coc.nvim')
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
   Plug 'christoomey/vim-tmux-navigator'
         \| call s:configure('vim-tmux-navigator')
   Plug 'ctrlpvim/ctrlp.vim'
@@ -35,13 +38,9 @@ if s:is_group_enabled('core') "{{{
   Plug 'tpope/vim-commentary'
   Plug 'ntpeters/vim-better-whitespace'
         \| call s:configure('vim-better-whitespace')
-  Plug 'mattn/emmet-vim'
-        \| call s:configure('emmet-vim')
 endif "}}}
 
 if s:is_group_enabled('linter') "{{{
-  Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-        \| call s:configure('coc-prettier')
   Plug 'w0rp/ale'
         \| call s:configure('ale')
   Plug 'editorconfig/editorconfig-vim'
@@ -50,13 +49,8 @@ endif "}}}
 
 if s:is_group_enabled('syntax') "{{{
   Plug 'fatih/vim-go'
-  Plug 'leafgarland/typescript-vim'
   Plug 'dart-lang/dart-vim-plugin'
-  Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
-  Plug 'neoclide/coc-json'
-  Plug 'udalov/kotlin-vim'
   Plug 'sheerun/vim-polyglot'
-        \| call s:configure('vim-polyglot')
 endif "}}}
 
 if s:is_group_enabled('appearance') "{{{
