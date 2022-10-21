@@ -20,6 +20,7 @@ call plug#begin(g:settings.plugin_manager_dir)
 
 if s:is_group_enabled('core') "{{{
   Plug 'prabirshrestha/vim-lsp'
+        \| call s:configure('vim-lsp')
   Plug 'mattn/vim-lsp-settings'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
