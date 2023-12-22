@@ -28,5 +28,6 @@ call add(g:settings.plugin_groups, 'linter')
 call add(g:settings.plugin_groups, 'syntax')
 call add(g:settings.plugin_groups, 'appearance')
 call add(g:settings.plugin_groups, 'snippets')
+call add(g:settings.plugin_groups, 'ai')
 "}}}
 

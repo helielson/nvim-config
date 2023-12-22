@@ -23,6 +23,7 @@ if s:is_group_enabled('core') "{{{
         \| call s:configure('vim-lsp')
   Plug 'mattn/vim-lsp-settings'
   Plug 'prabirshrestha/asyncomplete.vim'
+        \| call s:configure('asyncomplete')
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
   Plug 'christoomey/vim-tmux-navigator'
@@ -60,6 +61,10 @@ endif "}}}
 
 if s:is_group_enabled('snippets') "{{{
   Plug 'honza/vim-snippets'
+endif "}}}
+
+if s:is_group_enabled('ai') "{{{
+  Plug 'Exafunction/codeium.vim'
 endif "}}}
 
 call plug#end()
